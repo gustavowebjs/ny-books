@@ -39,7 +39,7 @@ export const Layout = ({ children }: LayoutProps) => {
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 }`}
             >
-              Best Books
+              Books
             </Link>
             <Link
               to="/about"

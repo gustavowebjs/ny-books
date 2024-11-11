@@ -27,7 +27,7 @@ export class RemoteListBooksUseCase implements IListBooksUseCase {
       id: book.primary_isbn13,
       title: book.book_details[0]?.title,
       author: book.book_details[0]?.author,
-      rating: book.rank,
+      rank: book.rank,
     }));
   }
 }

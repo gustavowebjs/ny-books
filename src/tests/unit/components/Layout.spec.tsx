@@ -31,9 +31,7 @@ describe("Layout Component", () => {
   test("should render navigation links", () => {
     makeSut();
     expect(screen.getByRole("link", { name: /home/i })).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: /best books/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /books/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /about/i })).toBeInTheDocument();
   });
 

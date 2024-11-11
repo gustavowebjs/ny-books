@@ -21,7 +21,7 @@ export const BestBooks = () => {
   const [selectedCategory, setSelectedCategory] =
     useState<ICategory>("hardcover-fiction");
 
-  const { data, isLoading } = useQuery({
+  const { data = [], isLoading } = useQuery({
     queryKey: ["books", selectedCategory],
     queryFn: () =>
       new RemoteListBooksUseCase(
@@ -58,7 +58,7 @@ export const BestBooks = () => {
           </div>
         ) : (
           <div className="grid gap-6">
-            {(data || []).map((book) => (
+            {data.map((book) => (
               <div
                 key={book.title}
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
@@ -71,7 +71,7 @@ export const BestBooks = () => {
                 </p>
                 <div className="flex items-center text-gray-900 dark:text-white">
                   <span className="text-yellow-500">★</span>
-                  <span className="ml-1">{book.rating}/5</span>
+                  <span className="ml-1">{book.rank}</span>
                 </div>
               </div>
             ))}

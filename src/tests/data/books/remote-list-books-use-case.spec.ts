@@ -62,7 +62,7 @@ describe("RemoteListBooksUseCase", () => {
         id: "1234567890123",
         title: "Test Book",
         author: "Test Author",
-        rating: 1,
+        rank: 1,
       },
     ]);
   });
@@ -100,7 +100,7 @@ describe("RemoteListBooksUseCase", () => {
         id: "1234567890123",
         title: undefined,
         author: undefined,
-        rating: 1,
+        rank: 1,
       },
     ]);
   });
